@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="locale">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llBackGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x5dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:padding="@dimen/x1dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivImageBack"
+                    android:layout_width="@dimen/x28dp"
+                    android:layout_height="@dimen/x28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    style="@style/tsReg12PrimaryColorPurple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/x1dp"
+                    android:text="@string/button_back"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/x8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/x18sp"
+                app:layout_constraintBottom_toBottomOf="@id/llBackGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/llBackGroup"
+                tools:text="Title" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="@dimen/x24dp"
+                android:layout_height="@dimen/x20sp"
+                android:layout_marginEnd="@dimen/x16dp"
+                android:src="@drawable/ic_search_new"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgNotification"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_profile"
+                android:layout_width="@dimen/x32dp"
+                android:layout_height="@dimen/x32dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_profile_dummy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/x18dp"
+                app:riv_mutate_background="true"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgNotification"
+                android:layout_width="@dimen/x24dp"
+                android:layout_height="@dimen/x24dp"
+                android:layout_marginEnd="@dimen/x24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_search"
+                app:srcCompat="@drawable/ic_notification_bar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <fragment
+        android:id="@+id/common_nav_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/watch_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

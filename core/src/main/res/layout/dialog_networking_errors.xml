@@ -1,0 +1,71 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x300dp"
+    android:background="#00555555"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="locale"
+    android:orientation="vertical"
+    android:textDirection="locale"
+    app:cardCornerRadius="@dimen/x18dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginStart="@dimen/x20dp"
+    android:layout_marginEnd="@dimen/x20dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x16dp">
+
+        <ImageView
+            android:id="@+id/dialogImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_internet" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/x7sp"
+            android:text="@string/no_internet_connection"
+            android:textColor="#23292f"
+            android:textSize="@dimen/x14sp" />
+
+
+        <TextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/please_check_your_internet_connection_and_try_again"
+            android:textColor="#868894"
+            android:textSize="@dimen/x12sp" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="@dimen/x12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x17dp"
+            android:background="@drawable/bg_cyan_gradient_rounded_button"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/x8dp"
+            android:paddingEnd="@dimen/x8dp"
+            android:paddingTop="@dimen/x5dp"
+            android:paddingBottom="@dimen/x8dp"
+            android:text="@string/okay"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x18sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

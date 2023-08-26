@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+version = "2.2.1"
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion(Android.minSdkVersion)
+        targetSdkVersion(Android.targetSdkVersion)
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        
+
+        CerqelDev {
+            initWith debug
+        }
+        CerqelTest {
+            initWith debug
+        }
+        CerqelUat {
+            initWith debug
+        }
+
+    }
+    namespace 'droidninja.filepicker'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //kotlin
+    implementation(Kotlin.kotlin_stdlib_jdk)
+    implementation(Kotlin.kotlin_stdlib)
+    implementation(Kotlin.core_ktx)
+    implementation(Kotlin.kotlin_reflect)
+
+    //Androidx
+    implementation(Androidx.appcompat)
+    implementation(Androidx.fragment)
+    implementation(Androidx.cardview)
+    implementation(Androidx.recyclerview)
+    implementation(Androidx.multidex)
+    implementation(Androidx.legacy)
+    kapt(Androidx.appcompat)
+    implementation(Androidx.ifecycle_reactivestreams)
+    implementation(Androidx.lifecycle_common)
+    implementation(Androidx.lifecycle_runtime)
+    implementation(Androidx.lifecycle_livedata)
+    implementation(Androidx.constraintlayout)
+    implementation(Androidx.navigation_fragment)
+    implementation(Androidx.navigation_ui)
+    implementation(Androidx.room_runtime)
+    implementation(Androidx.room_ktx)
+    kapt(Androidx.room_compiler_kapt)
+    implementation(Androidx.lifecycle_viewmodel)
+    implementation(Androidx.activityKtx)
+    implementation(Androidx.fragmentKtx)
+
+    //Material
+    implementation(Material.material)
+
+
+    //glide
+    implementation(Glide.glide)
+    kapt(Glide.glideProcess)
+
+    //rounded image view
+    implementation(Lib.roundedImageView)
+}
+repositories {
+    mavenCentral()
+}

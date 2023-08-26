@@ -1,0 +1,115 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'de.mannodermaus.android-junit5'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'io.github.islamkhsh.xdimen'
+
+android {
+    compileSdkVersion(Android.compileSdkVersion)
+
+    defaultConfig {
+        minSdkVersion(Android.minSdkVersion)
+        targetSdkVersion(Android.targetSdkVersion)
+        versionName = Android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    namespace 'com.youxel.core'
+
+}
+
+xdimen {
+    deleteOldXdimen.set(true)
+    designWidth.set(375)
+    designDpi.set(mdpi())
+    targetDevicesWidth.set(devicesInPortrait)
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":navigation")
+    api project(":filepicker")
+    //kotlin
+    implementation(Kotlin.kotlin_stdlib_jdk)
+    implementation(Kotlin.kotlin_stdlib)
+    implementation(Kotlin.core_ktx)
+    implementation(Kotlin.kotlin_reflect)
+    //Androidx
+    implementation(Androidx.appcompat)
+    implementation(Androidx.fragment)
+    implementation(Androidx.multidex)
+    implementation(Androidx.legacy)
+    implementation(Material.material)
+    implementation(Androidx.ifecycle_reactivestreams)
+    implementation(Androidx.lifecycle_common)
+    implementation(Androidx.lifecycle_runtime)
+    implementation(Androidx.lifecycle_livedata)
+    implementation(Androidx.navigation_ui)
+    implementation(Androidx.lifecycle_viewmodel)
+    kapt(Androidx.appcompat)
+    //Material
+    implementation(Material.material)
+    implementation(Androidx.constraintlayout)
+    implementation(Androidx.cardview)
+    implementation(Androidx.recyclerview)
+    implementation(Androidx.navigation_fragment)
+
+    implementation(Androidx.viewPager2)
+
+    //glide
+    implementation(Glide.glide)
+    kapt(Glide.glideProcess)
+    // coil svg image loader
+    implementation(Coil.coil)
+    implementation(Coil.coilSVG)
+    //Retrofit
+    implementation(Retrofit.retrofit2)
+    implementation(Retrofit.okhttp3)
+    implementation(Retrofit.converter_gson)
+    implementation(Retrofit.logging_interceptor)
+
+    //Gson
+    implementation(Gson.gson)
+    //Coroutines
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
+    //Hilt
+    implementation(Hilt.hilt_android)
+    kapt(Hilt.kapt_hilt_compiler)
+    kapt(Hilt.kapt_hilt_android)
+
+    //rounded image view
+    implementation(Lib.roundedImageView)
+    //image Picker
+    implementation(Lib.imagePicker)
+    implementation(Lib.imagePickerPro)
+    //Shared Pref
+    implementation(SharedPreference.hawk)
+}

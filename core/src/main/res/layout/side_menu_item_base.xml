@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sideMenuRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/tsReg13AlertClosed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30dp"
+        android:layout_marginTop="@dimen/x20dp"
+        android:gravity="center_vertical"
+        android:minHeight="34dp"
+        android:theme="@style/SideMenuHeaderTitles"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/add_ons" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/compony_logo"
+            android:layout_width="@dimen/x38dp"
+            android:layout_height="@dimen/x38dp"
+            android:layout_marginStart="@dimen/x30dp"
+            android:layout_marginTop="@dimen/x5dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_youxel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="18dp"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/company_name"
+            style="@style/tsReg14RichBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20dp"
+            android:layout_marginTop="@dimen/x12dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@id/compony_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="YOUXEL" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

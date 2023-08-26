@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale">
+
+    <LinearLayout
+        android:id="@+id/applyFilterContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_apply_filter_container"
+        android:elevation="@dimen/x8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvResetFilter"
+            style="@style/tsReg12PrimaryColorPurple"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x60dp"
+            android:layout_marginStart="@dimen/x24dp"
+            android:layout_marginTop="@dimen/x27dp"
+            android:layout_marginEnd="@dimen/x16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_selected_date_filter"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/x16dp"
+            android:text="@string/reset" />
+
+        <TextView
+            android:id="@+id/tvApplyFilter"
+            style="@style/tsReg12PrimaryColorPurple"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x60dp"
+            android:layout_marginTop="@dimen/x27dp"
+            android:layout_marginEnd="@dimen/x24dp"
+            android:layout_marginBottom="@dimen/x20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_apply_filter"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/x16dp"
+            android:text="@string/apply_filters"
+            android:textColor="@color/cerqel_color_w" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

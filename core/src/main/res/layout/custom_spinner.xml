@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextInputLayout.DropDownStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:endIconDrawable="@drawable/selector_spinner_arrow"
+    app:hintEnabled="false">
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/tvAutoComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:inputType="none|textNoSuggestions"
+        android:lineSpacingExtra="0sp"
+        android:maxLines="1"
+        tools:text="Nov 2020" />
+
+</com.google.android.material.textfield.TextInputLayout>
+

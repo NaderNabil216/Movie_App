@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screens">
+
+    <include
+        android:id="@+id/searchView"
+        layout="@layout/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/contentLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/x16dp"
+        android:background="@color/white"
+        android:padding="@dimen/x16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView">
+
+        <TextView
+            android:id="@+id/tvRecentSearch"
+            style="@style/tsReg14PlaceHolderGreyDark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x4dp"
+            android:text="@string/recent_search"
+            android:textAlignment="viewStart"
+            app:drawableStartCompat="@drawable/ic_recent_search"
+            app:layout_constraintEnd_toStartOf="@id/tvSeeAll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSeeAll"
+            style="@style/tsReg14Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/x8dp"
+            android:text="@string/see_all"
+            android:textAlignment="viewEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvRecentSearch"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentSearch"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/x8dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSeeAll"
+            tools:itemCount="30"
+            tools:listitem="@layout/item_recent_search_result" />
+
+        <TextView
+            android:id="@+id/tvEmptyState"
+            style="@style/tsReg14TextBodyGray"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/x8dp"
+            android:gravity="center"
+            android:text="@string/try_searching_with_keywords"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSeeAll" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

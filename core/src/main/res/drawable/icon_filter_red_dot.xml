@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/red_dot_filter"
+        android:width="@dimen/x10dp"
+        android:height="@dimen/x10dp"
+        android:gravity="top|center|start"/>
+</layer-list>

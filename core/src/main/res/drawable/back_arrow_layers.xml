@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <color android:color="@android:color/transparent" />
+    </item>
+
+    <item
+        android:bottom="@dimen/x4dp"
+        android:end="@dimen/x4dp"
+        android:start="@dimen/x4dp"
+        android:top="@dimen/x4dp"
+        android:drawable="@drawable/ic_back_arrow">
+
+    </item>
+
+</layer-list>

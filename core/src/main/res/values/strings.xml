@@ -1,0 +1,495 @@
+<resources>
+    <string name="app_name">Cerqel</string>
+    <string name="loading">Please wait…</string>
+    <string name="health">Health</string>
+    <string name="signin">Sign in</string>
+    <string name="start">Start</string>
+    <string name="name">Alicia Scott</string>
+    <string name="date">Today 03:14PM </string>
+    <string name="empty_list">oops, List is empty.</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title">Title</string>
+    <string name="invite_people">Invite People</string>
+    <string name="invited_people_is_empty">You did not invite people</string>
+    <string name="time_from">Time From</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="not_clicked">not_clicked</string>
+    <string name="clicked">clicked</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="popular_persons">Popular persons</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet non tellus at auctor. Fusce quis nisi vel tortor maximus volutpat. Duis congue diam lorem, at commodo turpis tincidunt eu. Nunc dignissim purus quis nunc consequat, sed blandit urna sagittis. Etiam eu condimentum ligula, ut volutpat urna. Integer vel lacus eu dui suscipit dapibus. Aenean enim turpis, accumsan id justo id, commodo elementum dui. Proin in nibh nec ante semper varius. Fusce facilisis, elit eu pulvinar vehicula, sem risus mattis mi, non commodo risus urna ut sapien. Morbi mollis dignissim gravida. Morbi lobortis erat et eros pulvinar, sed interdum elit sollicitudin. Sed eleifend neque non pharetra tincidunt. Fusce libero risus, luctus sed venenatis et, elementum at turpis. In hac habitasse platea dictumst. Vivamus luctus dapibus nulla nec viverra. Morbi nec lacus et sapien laoreet porttitor eu vitae nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet non tellus at auctor. Fusce quis nisi vel tortor maximus volutpat. Duis congue diam lorem, at commodo turpis tincidunt eu. Nunc dignissim purus quis nunc consequat, sed blandit urna sagittis. Etiam eu condimentum ligula, ut volutpat urna. Integer vel lacus eu dui suscipit dapibus. Aenean enim turpis, accumsan id justo id, commodo elementum dui. Proin in nibh nec ante semper varius. Fusce facilisis, elit eu pulvinar vehicula, sem risus mattis mi, non commodo risus urna ut sapien. Morbi mollis dignissim gravida. Morbi lobortis erat et eros pulvinar, sed interdum elit sollicitudin. Sed eleifend neque non pharetra tincidunt. Fusce libero risus, luctus sed venenatis et, elementum at turpis. In hac habitasse platea dictumst. Vivamus luctus dapibus nulla nec viverra. Morbi nec lacus et sapien laoreet porttitor eu vitae nulla.</string>
+    <string name="gazt_invite">GAZT invites businesses to file value-added tax returns for the months of April and July</string>
+    <string name="loading_more">Loading More…</string>
+    <string name="lorem_cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet non tellus at auctor. </string>
+    <string name="favorite_news">Favorite</string>
+    <string name="favorites">Favorites</string>
+    <string name="details">Details</string>
+    <string name="news_list">News</string>
+    <string name="latest_news">Latest</string>
+    <string name="latest_news_home">Latest News</string>
+    <string name="news">News</string>
+    <string name="add_new_event">Add New Event</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="news_details">News Details</string>
+    <string name="pinned_news">Pinned News</string>
+    <string name="share_using">Share Using</string>
+    <string name="added_to_favourites">Added to favourites</string>
+    <string name="removed_from_favourites">Removed From favourites</string>
+    <string name="announcements">Announcements</string>
+    <string name="announcments_detailes">Announcement Details</string>
+    <string name="event_view">Event View</string>
+    <string name="people_invited">People Invited</string>
+    <string name="youxel">YOUXEL</string>
+    <string name="tremvo">Tremvo</string>
+    <string name="latest_announcements">Latest Announcements</string>
+    <string name="recent_media">Recent media</string>
+    <string name="favorite_announcements">Favorite</string>
+    <string name="attachments">Attachments</string>
+    <string name="medium">Medium</string>
+    <string name="normal">Normal</string>
+    <string name="high">High</string>
+    <string name="urgent">Urgent</string>
+    <string name="low">Low</string>
+    <string name="there_s_no_news_yet">No Latest News yet!</string>
+    <string name="there_s_no_pinned_news_yet">No Pinned News yet!</string>
+    <string name="there_s_no_internal_news_yet">There’s no Internal News yet</string>
+    <string name="there_s_no_fav_news_yet">There’s no favorite News yet</string>
+    <string name="there_s_no_internal_fav_news_yet">There’s no favorite Internal News yet</string>
+    <string name="please_try_after_sometime">Please Try after sometime</string>
+    <string name="internal_news">Internal News</string>
+    <string name="view_all">View All</string>
+    <string name="see_all">See All</string>
+    <string name="dashboard">Dashboard</string>
+
+
+    <string name="my_profile">My Profile</string>
+    <string name="sign_out">Sign-out</string>
+    <string name="about_diwan">About DIWAN</string>
+
+    <!-- side menu -->
+    <string name="diwan_home">Home</string>
+    <string name="my_dashboard">Dashboard</string>
+    <string name="my_inbox">My Inbox</string>
+    <string name="my_development">My Development</string>
+    <string name="my_performance">My Performance</string>
+    <string name="my_academy">My Academy</string>
+    <string name="gazt_apps">GAZT Applications</string>
+    <string name="my_reporting">My Reporting</string>
+
+    <!-- side menu new -->
+    <string name="my_dashboard_side_menu">My Dashboard</string>
+    <string name="about_cerqel">About Cerqel</string>
+    <string name="log_out">LOG OUT</string>
+
+
+    <string name="added_to_favourite">Added to favourite</string>
+    <string name="removed_from_favourite">Removed from favourite</string>
+    <string name="no_favourite_announcements_yet">There’s no favorite Announcements yet</string>
+    <string name="there_s_no_announcements_yet">No Latest Announcements Yet!</string>
+    <string name="there_s_no_media_yet">No Recent media Yet!</string>
+    <string name="no_favourites_announcements_yet">No Favourites Announcements Yet!</string>
+    <string name="sucess_added_news_to_favorite">News is added to favorite successfully</string>
+    <string name="success_removed_news_from_favorite">News is removed from favorite successfully</string>
+    <string name="announcement">Announcement</string>
+
+    <string name="Success">Success</string>
+    <string name="you_can_check_it_from_the_calendar">You can check it from the Calendar</string>
+    <string name="confirmation_delete">Confirmation Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="next">Next</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="are_you_sure_you_need_to_delete_this_event">Are you sure you need to delete this event</string>
+    <string name="event_history">Event History</string>
+    <string name="no_active_events">No Active Events Yet!</string>
+    <string name="no_past_events">No Past Events Yet!</string>
+    <string name="to">To</string>
+
+    <string name="latest_internal_news">Latest</string>
+    <string name="favorite_internal_news">Favorite</string>
+    <string name="Terms">Terms</string>
+    <string name="available_until">Available until </string>
+    <string name="more_details">More Details</string>
+    <string name="valid_to">Valid to</string>
+    <string name="our_offers">Our Offers</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="filter_by">Filter</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="promo_code">Promocode</string>
+    <string name="my_settings">My Settings</string>
+    <string name="manage_your_account_settings_password_notifications_your_prefered_language">Manage your account settings. Notifications &amp; your preferred Language.</string>
+    <string name="notifications">Notifications</string>
+    <string name="language">Language</string>
+    <string name="choose_the_preferred_language">Please select your preferred language.</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <string name="arabic_lang">Arabic</string>
+    <string name="english_lang">English</string>
+    <string name="save">Save</string>
+    <string name="language_save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="there_is_no_offers_yet">No Latest Offers Yet!</string>
+    <string name="there_is_no_fav_offers_yet">No Favourites Offers Yet!</string>
+    <string name="sar"> SAR</string>
+    <string name="newest">Newest</string>
+    <string name="oldest">Oldest</string>
+    <string name="select_category">Category</string>
+    <string name="sorting">Sorting</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="contact_details">My Contact details</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="dependents">Dependents</string>
+    <string name="payroll_information">Bank Account</string>
+    <string name="payroll">Payroll Information</string>
+    <string name="employment_information">Employment Details</string>
+    <string name="career">Career</string>
+    <string name="takleef_information">Takleef Information</string>
+    <string name="team_members">Team members</string>
+
+    <string name="services">Services</string>
+    <string name="all">All</string>
+    <string name="show_all">Show All</string>
+    <string name="about">About</string>
+    <string name="shehab_elsarky">Mohammed AlSuwailem</string>
+    <string name="quote">A dream doesn\'t become reality through magic; it takes sweat, determination and hard work.</string>
+    <string name="ibrahem">Ibrahim Farag</string>
+    <string name="software_developer">Business Developer</string>
+    <string name="direct_manager">Direct Manager</string>
+    <string name="software_development">Business Development Department</string>
+    <string name="email_request">Email Request</string>
+    <string name="there_is_no_internet_connection">There is no internet connection</string>
+    <string name="okay">OK</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="internal_server_error">Internal Server Error</string>
+    <string name="unknown_host">Unknown Host</string>
+    <string name="please_check_your_internet_connection_and_try_again">Please check your internet connection and try again</string>
+    <string name="categories">Categories</string>
+    <string name="validation_date">Validation Date</string>
+    <string name="by_date">By Date</string>
+    <string name="date_calender">Date</string>
+    <string name="add_your_title">Add your title</string>
+    <string name="add_event_title">Add event title</string>
+    <string name="add_event_time">Select a time</string>
+    <string name="select_date_title">Select date</string>
+    <string name="add_location">Add Location</string>
+    <string name="location">Location</string>
+    <string name="Add">Add</string>
+    <string name="HR">HR</string>
+    <string name="check_all_requests_received_and_sent">Check all requests received and sent .</string>
+    <string name="what_category_are_you_looking_in">What Category are you looking in?</string>
+    <string name="human_resources">Human Resources</string>
+    <string name="personal">Personal Information</string>
+    <string name="contact_address">Contact &amp; Addresses</string>
+    <string name="contact">Contact &amp; Addresses</string>
+    <string name="emergency">Emergency Contacts</string>
+    <string name="emergency_contact">Emergency Contacts</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="business_department">Business Department</string>
+
+    <string name="cerqel_version">%s v%s © 2021</string>
+    <string name="employment_certificate_with_salary_details_pdf">Employment Certificate With Salary Details.Pdf</string>
+    <string name="first_name_en">First Name(En)</string>
+    <string name="first_name">First Name</string>
+    <string name="second_name_en">Second Name(En)</string>
+    <string name="third_name_en">Third Name(En)</string>
+    <string name="last_name_en">Last Name(En)</string>
+    <string name="last_name">Last Name</string>
+    <string name="display_name">Display Name</string>
+    <string name="first_name_ar">First Name(Ar)</string>
+    <string name="second_name_ar">Second Name(Ar)</string>
+    <string name="third_name_ar">Third Name(Ar)</string>
+    <string name="last_name_ar">Last Name(Ar)</string>
+    <string name="Mohsen">Mohesen</string>
+    <string name="hr">Human Resources</string>
+    <string name="security">Security</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="it">Information Technology</string>
+    <string name="emp_benefits">Employee Benefits</string>
+    <string name="finance">Finance</string>
+    <string name="all_services">All Services</string>
+    <string name="co">Central Operations</string>
+    <string name="mohammed_ali">Mohammed Ali</string>
+    <string name="salutation">Salutation</string>
+    <string name="mr">Mr</string>
+    <string name="formal_name">Formal Name</string>
+    <string name="bader">Bader</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="marital">Marital Status</string>
+    <string name="married">Married</string>
+    <string name="nationality">Nationality</string>
+    <string name="saudi">Saudi</string>
+    <string name="snationality">Second Nationality</string>
+    <string name="native_lang">Native Language</string>
+    <string name="challenge_status">Challenge Status</string>
+    <string name="no">No</string>
+    <string name="please_check_web_app_to_view_all_details">Please check Web app to view all details</string>
+    <string name="previous_actions">Previous Actions</string>
+    <string name="approve">Approve</string>
+    <string name="_3_hours_ago">3 hours ago</string>
+    <string name="processed_as">Processed As</string>
+    <string name="hr_department">HR Department</string>
+    <string name="process_date">Process Date</string>
+    <string name="_12_aug_2020">12 Aug 2020</string>
+    <string name="comment">Comment</string>
+    <string name="i_have_to_take_a_few_sick_days_off_due_to_my_surgery_appointment_end_of_this_week">I have to take a few sick days off due to my surgery appointment end of this week</string>
+    <string name="request_details">Request Details</string>
+    <string name="discussions">Discussions</string>
+    <string name="expand_card_to_see_full_process_details">Expand card to see full process details</string>
+    <string name="unfortunately_you_can_t_take_your_action_from_here_please_go_to_web_app">Unfortunately you can’t take your action from here , Please go to Web app</string>
+    <string name="there_is_no_discussions_yet">There is no discussions yet</string>
+    <string name="benefits">Benefits</string>
+    <string name="educational_information">Education</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="certificates">Certificates and Courses</string>
+
+    <string name="empty_requests">No Requests Yet!</string>
+    <string name="empty_tasks">No Tasks Yet!</string>
+    <string name="write_here">Write here</string>
+    <string name="there_is_no_discussion">There is No Discussion</string>
+    <string name="error_loading_image">Error loading image</string>
+    <string name="out_of_memory">Out of memory</string>
+    <string name="if_you_close_this_request_you_will_permanently_lose_the_data">If you close this request you will permanently lose the data</string>
+    <string name="please_fill_in_all_the_required_fields">Please fill in all the required fields</string>
+    <string name="no_app_found">No app found to open the attachment</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="pick_file">Pick File</string>
+    <string name="comments">Comments</string>
+    <string name="example_of_additional_information_to_provide_any_error_messages_received_or_description_of_issue_s">Example of additional information to provide: Any error messages received or description of issue(s)</string>
+    <string name="request_action">Request Action</string>
+    <string name="add_attachment">Add attachment</string>
+    <string name="action_taken_successfully">Action Taken Successfully</string>
+    <string name="error_in_taking_action">Error In Taking Action</string>
+    <string name="comment_is_required">Comment is Required</string>
+    <string name="max_number_of_files">Maximum number of added attachments is %s</string>
+
+    <string name="empty_favorite_service">No Favourite Services Added Yet</string>
+    <string name="empty_favorite_service_info">Try add a service as a favorite</string>
+    <string name="choose_Image">Choose Image</string>
+    <string name="tab_to_select">Tap to select</string>
+    <string name="done">Done</string>
+    <string name="done_edit">Done</string>
+
+    <string name="file_size_error">Max picked file size is %d MB</string>
+    <string name="you_should_allow_the_permissions_from_settings">You should allow the permissions from settings</string>
+    <string name="permission_are_not_granted">Permissions are not granted</string>
+    <string name="employees">Employees</string>
+    <string name="search_by_users_or_services">Search by users or services</string>
+    <string name="type_a_keyword">Type a keyword</string>
+    <string name="search_by_user_or_service_name">Search By User Or Service Name</string>
+    <string name="recent_search">Recent search</string>
+    <string name="clear_all">Clear All</string>
+    <string name="search_results_for_users">Search Results For Users</string>
+    <string name="no_search_result">No search result</string>
+    <string name="results">Results</string>
+    <string name="sorry_no_results_found">Sorry no results found!</string>
+    <string name="please_try_another_search">Please try another search.</string>
+    <string name="search_empty_state_subtitle">Whoops ... this information is not\n available for a moment</string>
+    <string name="try_another_keyword">Try another keyword</string>
+    <string name="please_try_another_keyword">Please try another keyword.</string>
+    <string name="try_searching_with_keywords">Try search with keywords</string>
+    <string name="search_results_for_services">Search Results For Services</string>
+    <string name="reopen_request">Reopen The Request</string>
+    <string name="max_number_of_attachments">Maximum Number Of Attachments is %s</string>
+    <string name="from_date">From Date</string>
+    <string name="end_date">End Date</string>
+    <string name="enter_at_least_3_char">Enter at least 3 characters to search</string>
+    <string name="topic">Topic</string>
+    <string name="my_requests">Latest Requests</string>
+    <string name="recently_used">Recently Used</string>
+    <string name="most_used">Most Used</string>
+    <string name="sent">Sent</string>
+    <string name="view_profile">View Profile</string>
+    <string name="item">item</string>
+    <string name="mobile">Mobile</string>
+    <string name="landline">Landline</string>
+    <string name="email">E-mail</string>
+    <string name="scan_businss_card">scan business card</string>
+    <string name="share_businss_card">share business card</string>
+    <string name="add_to_contacts">ADD TO CONTACTS</string>
+    <string name="scan_to_view_your_card">Scan to view your card</string>
+    <string name="self_service">Self Service</string>
+    <string name="offers">Offers</string>
+    <string name="media">Media</string>
+    <string name="media_library">Media Library</string>
+    <string name="faq">FAQs</string>
+    <string name="search_faq">Search FAQs</string>
+    <string name="search_applications">Search Apps</string>
+    <string name="faqs_empty_state">No Faqs Yet!</string>
+    <string name="application_empty_state">No Applications Yet!</string>
+    <string name="add_ons">Add-ons</string>
+    <string name="events">Events</string>
+    <string name="company_profile">Company Profile</string>
+    <string name="documents">Documents</string>
+    <string name="media_center">Media Center</string>
+    <string name="library">Library</string>
+    <string name="apps">Apps</string>
+    <string name="help">Help</string>
+    <string name="search">Search</string>
+    <string name="please_try_another_filter">Please try another Filter.</string>
+    <string name="the_item_is_already_exist">This search keyword is already exist</string>
+    <string name="showing">Showing ( %s )</string>
+    <string name="discount">Discount</string>
+    <string name="off">Off</string>
+    <string name="all_offers">All Offers</string>
+    <string name="deals_and_promotion">Offers</string>
+    <string name="latest">Latest</string>
+    <string name="latest_offer">Latest</string>
+    <string name="favourites">Favourites</string>
+    <string name="promocode">Promocode:</string>
+    <string name="promo_code_copied">Promo code copied</string>
+    <string name="terms">Terms</string>
+    <string name="offer_details">Offer Details</string>
+    <string name="event_details">Event Details</string>
+    <string name="new_">NEW</string>
+    <string name="happening_now">Happening Now</string>
+    <string name="sort_by">Sort by</string>
+    <string name="today_header">Today</string>
+    <string name="yesterday_header">Yesterday</string>
+    <string name="history_header">Earlier</string>
+    <string name="apply_filter">Apply Filters</string>
+    <string name="reset">Reset</string>
+    <string name="close">Close</string>
+    <string name="confirm_logout">Are you sure you want to logout?</string>
+
+    <string-array name="date_filters_list">
+        <item>All</item>
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>Last 7 days</item>
+        <item>Last 30 days</item>
+    </string-array>
+    <string name="structure">Structure</string>
+    <string name="department">Department</string>
+    <string name="company_strategy">Company Strategy</string>
+    <string name="company_information">Company information</string>
+    <string name="kafd">KAFD</string>
+    <string name="check">CHECK</string>
+    <string name="support">Support</string>
+    <string name="FAQs">FAQs</string>
+    <string name="Settings">Settings</string>
+    <string name="Logout">Logout</string>
+    <string name="app_version" translatable="true">App Version - V</string>
+    <string name="change_password">Change Password</string>
+    <string name="default_language">Default language</string>
+    <string name="personal_accessability">Personal accessability</string>
+    <string name="social_accounts">Social accounts</string>
+    <string name="empty_title"></string>
+    <string name="send_notifications_to_my_emails">Send notifications to my emails</string>
+    <string name="read_my_notifications_in_my_account">Read my notifications in my account</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="Allow_push_notification_for_your_transactions">Allow push notification for your
+transactions.</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enhance_screen_txt">Accessibility refers to the ability of all users to access and interact with the application, including those who use assistive technologies. You can use these settings to optimize the application to suit your needs and preferences.\n
+     Please note that Enhanced Keyboard Navigation, Enhanced Screen Reader Support, and Colour Vision Adjustments are not supported in all areas of the application.</string>
+    <string name="enhanced_screen_reader_support">Enhanced Screen Reader Support</string>
+    <string name="normal_colors">Normal colors</string>
+    <string name="Deuteranopia">Deuteranopia</string>
+    <string name="tritanopia_colors">Tritanopia colors</string>
+    <string name="high_contrast">High Contrast</string>
+    <string name="text_color">Text Color</string>
+    <string name="cancle">Cancel</string>
+    <string name="permission_rationale_msg">We need your permissions</string>
+    <string name="permissions_required">Permissions required</string>
+    <string name="permissions_required_desc">You should allow the permissions from app settings to enjoy every feature</string>
+
+
+    <string-array name="content_filters_list">
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>Alphabetical A-Z</item>
+        <item>Alphabetical Z-A</item>
+    </string-array>
+
+    <string-array name="announcement_filters_list">
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>Alphabetical A-Z</item>
+        <item>Alphabetical Z-A</item>
+        <item>Low Priority</item>
+        <item>High Priority</item>
+    </string-array>
+
+    <string-array name="offers_filters_list">
+        <item>Newest</item>
+        <item>Oldest</item>
+        <item>Expiring Soon</item>
+        <item>Alphabetical A-Z</item>
+        <item>Alphabetical Z-A</item>
+    </string-array>
+
+    <string name="min_thumbnail_height">Minimum thumbnail height is</string>
+    <string name="min_thumbnail_width">Minimum thumbnail width is</string>
+
+    <string name="no_services_added">No Services Added Yet!</string>
+    <string name="no_favourites_news_yet">No Favourites News Yet!</string>
+
+    <string name="deals_Promotions_Detailes">Offer Details</string>
+    <string name="scan_qr_code_to_directly_apply_thr_offer">Scan QR code to directly apply the offer.</string>
+    <string name="share">Share</string>
+    <string name="session_expired_please_login_again">Session expired, please login again</string>
+    <string name="upcoming">Upcoming</string>
+
+    <string name="media_photos">Photos</string>
+    <string name="media_videos">Videos</string>
+    <string name="video_player_full_screen_error">Video player encountered an error</string>
+    <string name="uploaded_by">Uploaded By</string>
+    <string name="media_empty_state">No Media Library Yet!</string>
+    <string name="by">by</string>
+    <string name="libraries">Libraries</string>
+    <string name="album_name">Album Name</string>
+
+    <string name="knowledge_base">Knowledge Base</string>
+    <string name="search_knowledge_base">Search KB</string>
+    <string name="knowledge_base_empty_state">No Knowledgebase Yet!</string>
+
+    <string name="applications">My Applications</string>
+
+    <string name="unread_only">Unread Only</string>
+
+    <string name="my_calendar">My Calendar</string>
+
+    <string name="my_calendar_empty">My Calendar is empty</string>
+    <string name="select_all">Select All</string>
+    <string name="invite_people_done">Done</string>
+    <string name="selected_counter">Selected (%d)</string>
+    <string name="input_is_required">%s is required</string>
+    <string name="organizer">Organizer</string>
+    <string name="event_added_successfully">Event added Successfully</string>
+    <string name="event_removed"> has been removed</string>
+    <string name="event_edited_successfully">Event Edited Successfully</string>
+    <string name="start_time_cant_be_after_end_time">Start Time Can Not Be After End Time</string>
+    <string name="end_time_cant_be_before_start_time">End Time Can Not Be Before Start Time</string>
+    <string name="try_searching_with_another_name">Try searching with Another Name</string>
+    <string name="sugesstions">Sugesstions</string>
+    <string name="you_have_selected_past_date">You Have Selected Past Date</string>
+    <string name="you_have_selected_past_time">You Have Selected Past Time</string>
+    <string name="category">Category</string>
+    <string name="add_to_calendar">Add to Calendar</string>
+    <string name="view_my_calendar">View My Calendar</string>
+    <string name="event_has_been_added_to_calendar_successfully">has been added to your calendar successfully</string>
+    <string name="ok">ok</string>
+</resources>

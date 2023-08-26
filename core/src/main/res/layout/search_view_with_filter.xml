@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/x16dp"
+    android:paddingVertical="@dimen/x12dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlSearch"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x16dp"
+        android:gravity="center_vertical"
+        app:boxCornerRadiusBottomEnd="@dimen/x8dp"
+        app:boxCornerRadiusBottomStart="@dimen/x8dp"
+        app:boxCornerRadiusTopEnd="@dimen/x8dp"
+        app:boxCornerRadiusTopStart="@dimen/x8dp"
+        app:boxStrokeColor="@color/primary_color_purple_light"
+        app:boxStrokeWidth="@dimen/x1dp"
+        app:endIconDrawable="@drawable/ic_clear_search"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/primary_main"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filterLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_search_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x42dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/x10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_subtitle"
+            android:textSize="@dimen/x14sp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x10dp"
+        android:layout_marginTop="@dimen/x16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tlSearch"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sh_border_rounded"
+            android:padding="@dimen/x8dp"
+            android:src="@drawable/ic_search_box_filter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivFilterRedDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x8dp"
+            android:layout_marginEnd="@dimen/x8dp"
+            android:src="@drawable/icon_filter_red_dot"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x130dp"
+    android:layout_marginHorizontal="@dimen/x32dp"
+    android:background="@drawable/bg_logout">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tsReg14TextBodyGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/confirm_logout"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/horizontalSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/x21dp"
+        android:background="@color/separator_color_opaque"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <View
+        android:id="@+id/verticalSeparator"
+        android:layout_width="@dimen/x1dp"
+        android:layout_height="0dp"
+        android:background="@color/separator_color_opaque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalSeparator" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        style="@style/tsMed16Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_marginVertical="@dimen/x15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalSeparator"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalSeparator" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        style="@style/tsMed16Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Logout"
+        android:textColor="@color/reddish"
+        android:layout_marginVertical="@dimen/x15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/verticalSeparator"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalSeparator" />
+</androidx.constraintlayout.widget.ConstraintLayout>

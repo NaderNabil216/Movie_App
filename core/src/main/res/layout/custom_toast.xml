@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/x8dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/x16dp"
+        android:elevation="@dimen/x4dp"
+        app:cardBackgroundColor="@color/bg_toast"
+        app:cardCornerRadius="@dimen/x8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/x4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/stroke_color_toast"
+        app:strokeWidth="@dimen/x1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/x5dp">
+
+            <ImageView
+                android:id="@+id/imgToast"
+                android:layout_width="@dimen/x24dp"
+                android:layout_height="@dimen/x24dp"
+                android:layout_marginStart="@dimen/x10dp"
+                android:src="@drawable/successfuly"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/msgToast"
+                style="@style/tsReg13AlertClosed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/x10dp"
+                android:textColor="@color/rich_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imgCloseToast"
+                app:layout_constraintStart_toEndOf="@id/imgToast"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/imgCloseToast"
+                android:layout_width="@dimen/x24dp"
+                android:layout_height="@dimen/x24dp"
+                android:layout_marginEnd="@dimen/x10dp"
+                android:src="@drawable/default_close_outline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

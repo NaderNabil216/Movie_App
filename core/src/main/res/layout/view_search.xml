@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="17dp"
+    android:paddingVertical="8dp"
+    android:theme="@style/MaterialAppTheme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x16dp"
+        android:layout_marginBottom="@dimen/x17dp"
+        android:background="@drawable/sh_border_rounded"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            app:boxBackgroundMode="none"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:endIconDrawable="@drawable/ic_clear_search"
+            app:endIconMode="clear_text"
+            app:endIconTint="@null"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivFilter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_search_box">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="@dimen/x10dp"
+                android:paddingTop="@dimen/x13dp"
+                android:paddingEnd="@dimen/x10dp"
+                android:paddingBottom="@dimen/x13dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_placeholder_gray_dark"
+                android:textSize="@dimen/x14sp"
+                app:boxBackgroundColor="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/x8dp"
+            android:src="@drawable/ic_search_box_filter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tlSearch"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

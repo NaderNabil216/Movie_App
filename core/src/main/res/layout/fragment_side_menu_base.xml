@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="locale"
+    android:orientation="vertical"
+
+    tools:context=".base.dialog.side_menu_dialog.SideMenuNavigationFragmentDialog">
+
+    <ImageView
+        android:id="@+id/youxel_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30dp"
+        android:layout_marginTop="@dimen/x20dp"
+        android:src="@drawable/youxel_horizontal_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30dp"
+        android:layout_marginTop="@dimen/x30dp"
+        android:layout_marginEnd="@dimen/x20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/youxel_logo">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_profile"
+            android:layout_width="@dimen/x40dp"
+            android:layout_height="@dimen/x40dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_profile_dummy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/x20dp"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            style="@style/tsSemi13RichBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15dp"
+            android:text="John Henderson"
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/tsReg13AlertClosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x16dp"
+            android:layout_marginTop="-5dp"
+            app:layout_constraintStart_toEndOf="@id/img_profile"
+            app:layout_constraintTop_toBottomOf="@id/tvUsername"
+            tools:text="John@cerqel.com" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x8dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorPrimary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCompanies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x33dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userInfoContainer"
+        tools:itemCount="3"
+        tools:listitem="@layout/side_menu_item_base" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/app_version_tv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llSettings"
+            android:layout_width="@dimen/x150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/x5dp"
+            android:paddingBottom="@dimen/x5dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="@dimen/x32dp"
+                android:layout_height="@dimen/x32dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="18dp"
+                app:riv_mutate_background="true" />
+
+            <TextView
+                android:id="@+id/tvSettings"
+                style="@style/tsReg14RichBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20dp"
+                android:layout_marginTop="@dimen/x5dp"
+                android:text="@string/settings" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLogout"
+            android:layout_width="@dimen/x150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/x5dp"
+            android:paddingBottom="@dimen/x5dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivLogout"
+                android:layout_width="@dimen/x32dp"
+                android:layout_height="@dimen/x32dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="18dp"
+                app:riv_mutate_background="true" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                style="@style/tsReg14RichBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20dp"
+                android:layout_marginTop="@dimen/x5dp"
+                android:text="@string/Logout" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_version_tv"
+        style="@style/tsReg11Nickel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x30dp"
+        android:paddingTop="@dimen/x5dp"
+        android:paddingBottom="@dimen/x15dp"
+        android:text="App Version - V1.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

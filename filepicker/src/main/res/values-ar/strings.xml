@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">اعدادات</string>
+    <string name="all_images">كل الصور</string>
+    <string name="done">تم</string>
+    <string name="permission_filepicker_rationale">"يجب منح السماح بالوصلول للذاكرة "</string>
+    <string name="no_files_found">لا يوجد ملفات</string>
+    <string name="attachments_title_text">(%d/%d)</string>
+    <string name="attachments_num">%d</string>
+    <string name="select_photo_text">اختر صورة</string>
+    <string name="select_doc_text">اختر ملف</string>
+    <string name="no_camera_exists">لم يتم ايجاد تطبيق للكاميرا</string>
+    <string name="video">فيديو</string>
+    <string name="videos">الفيديوهات</string>
+    <string name="images">الصور</string>
+    <string name="all_photos">كل الصور</string>
+    <string name="all_videos">كل الفيديوهات</string>
+    <string name="all_files">كل الملفات</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="17dp"
+    android:theme="@style/MaterialAppTheme">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlSearch"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/x16dp"
+        android:layout_marginTop="@dimen/x16dp"
+        android:layout_marginBottom="@dimen/x16dp"
+        android:gravity="center_vertical"
+        app:boxCornerRadiusBottomEnd="@dimen/x8dp"
+        app:boxCornerRadiusBottomStart="@dimen/x8dp"
+        app:boxCornerRadiusTopEnd="@dimen/x8dp"
+        app:boxCornerRadiusTopStart="@dimen/x8dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:boxStrokeWidth="@dimen/x1dp"
+        app:endIconDrawable="@drawable/ic_clear_search"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorPrimary"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_search_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x42dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/x10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_subtitle"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/x14sp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

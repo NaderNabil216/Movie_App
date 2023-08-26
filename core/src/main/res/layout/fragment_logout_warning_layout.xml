@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/x32dp"
+    android:background="@drawable/bg_logout"
+    android:layoutDirection="locale"
+    android:textDirection="locale">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tsReg14TextBodyGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/x16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/x32dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/session_expired_please_login_again"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/horizontalSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/x21dp"
+        android:background="@color/separator_color_opaque"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        style="@style/tsMed16Primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x54dp"
+        android:gravity="center"
+        android:text="@string/Logout"
+        android:textColor="@color/reddish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalSeparator" />
+</androidx.constraintlayout.widget.ConstraintLayout>
