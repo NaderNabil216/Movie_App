@@ -12,7 +12,6 @@ typealias CompleteBlock<F> = LocalUseCase.Request<F>.() -> Unit
 abstract class LocalUseCase<T, R> {
     private var parentJob: Job = Job()
     private var backgroundContext: CoroutineContext = Dispatchers.IO
-    private val jobs: ArrayList<Job> = arrayListOf()
 
     protected abstract suspend fun executeOnBackground(parameters: T): R
 

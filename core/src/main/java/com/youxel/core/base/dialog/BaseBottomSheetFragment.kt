@@ -57,9 +57,6 @@ abstract class BaseBottomSheetFragment<VB : ViewBinding, VM : BaseViewModel, Hel
 
     abstract val fragmentHelper: HelperClass
 
-    @Inject
-    lateinit var loginNavigation: LoginNavigation
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

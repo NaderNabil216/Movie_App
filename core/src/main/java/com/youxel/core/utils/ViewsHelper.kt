@@ -31,12 +31,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.chip.Chip
 import com.google.android.material.textfield.TextInputLayout
 import com.youxel.core.R
-import com.youxel.core.data.local.StorageManagerImpl
 import com.youxel.core.domain.entities.enums.ToastType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -69,15 +67,12 @@ fun Int.dpToPx(context: Context): Int {
     return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), metrics).toInt()
 }
 
-fun ImageView.loadImg(imgUrl: String, placeHolder: Int? = droidninja.filepicker.R.drawable.image_placeholder) {
-
-    val token = StorageManagerImpl().accessToken
-    val glideUrl = imgUrl.takeIf { it.isNotEmpty() }?.run {
-        GlideUrl(imgUrl) { mapOf(Pair("Authorization", "Bearer $token")) }
-    } ?: emptyText()
-
+fun ImageView.loadImg(
+    imgUrl: String,
+    placeHolder: Int? = droidninja.filepicker.R.drawable.image_placeholder
+) {
     val glideImg = Glide.with(context)
-        .load(glideUrl)
+        .load(imgUrl)
         .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
 
     placeHolder?.run {
@@ -89,7 +84,10 @@ fun ImageView.loadImg(imgUrl: String, placeHolder: Int? = droidninja.filepicker.
     glideImg.into(this)
 }
 
-fun ImageView.loadImg(drawableId: Int, placeHolder: Int? = droidninja.filepicker.R.drawable.image_placeholder) {
+fun ImageView.loadImg(
+    drawableId: Int,
+    placeHolder: Int? = droidninja.filepicker.R.drawable.image_placeholder
+) {
 
     val glideImg = Glide.with(context)
         .load(drawableId)

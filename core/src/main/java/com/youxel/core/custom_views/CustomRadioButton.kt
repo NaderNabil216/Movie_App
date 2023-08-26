@@ -19,7 +19,7 @@ import androidx.core.view.children
 import androidx.viewbinding.ViewBinding
 import com.youxel.core.R
 import com.youxel.core.base.fragment.BaseUiHelper
-import com.youxel.core.utils.getSpecificColor
+
 import com.youxel.core.utils.setMargins
 
 

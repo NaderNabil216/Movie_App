@@ -20,7 +20,7 @@ import com.youxel.core.domain.entities.base.ErrorModel
 import com.youxel.core.domain.entities.base.ErrorStatus
 import com.youxel.core.domain.entities.enums.ToastType
 import com.youxel.core.utils.LoadingListener
-import com.youxel.core.utils.getSpecificColor
+
 import com.youxel.core.utils.hideKeyBoardOutSideTap
 import com.youxel.core.utils.loadImg
 import com.youxel.core.utils.showToast
@@ -55,12 +55,6 @@ abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel, HelperClass : 
     private var bottomNavListener: BottomNavListener? = null
 
     @Inject
-    lateinit var loginNavigation: LoginNavigation
-
-    @Inject
-    lateinit var searchNavigation: SearchNavigation
-
-    @Inject
     lateinit var storageManager: StorageManager
 
     override fun onCreateView(
@@ -80,13 +74,7 @@ abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel, HelperClass : 
         handleState()
         viewModel.setNotInternetMsg(getString(R.string.no_internet_connection))
         view.findViewById<ImageView>(R.id.img_profile)?.run {
-            loadImg(storageManager.userProfileImage, R.drawable.ic_profile_dummy)
             setOnClickListener { toolbarListener?.openBaseSideMenu() }
-        }
-        view.findViewById<ImageView>(R.id.img_search)?.run {
-            setOnClickListener {
-                searchNavigation.toSearchScreen(requireActivity())
-            }
         }
     }
 

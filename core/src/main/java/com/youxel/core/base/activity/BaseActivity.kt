@@ -33,32 +33,12 @@ abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListe
     abstract var navGraphResourceId: Int
     protected lateinit var bundle: Bundle
 
-
     @LayoutRes
     open var layoutRes = R.layout.activity_common
 
-    @Inject
-    lateinit var dashboardNavigation: DashboardNavigation
-
-    @Inject
-    lateinit var newsNavigation: NewsNavigation
-
-    @Inject
-    lateinit var announcementsNavigation: AnnouncementsNavigation
-
-    @Inject
-    lateinit var servicesNavigation: ServicesNavigation
 
     @Inject
     lateinit var storageManager: StorageManager
-
-    @Inject
-    lateinit var searchNavigation: SearchNavigation
-
-    @Inject
-    lateinit var notificationsNavigation: NotificationsNavigation
-
-    private val baseUiHelper = BaseUiHelper()
 
 
     var toolbar: Toolbar? = null
@@ -114,14 +94,11 @@ abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListe
             tvTitle?.text = destination.label
         }
 
-        imgSearch?.setOnClickListener { searchNavigation.toSearchScreen(this) }
+        imgSearch?.setOnClickListener {}
 
         llNavigationGroup?.setOnClickListener { onBackPressed() }
 
-
-        imgNotification?.setOnClickListener {
-            notificationsNavigation.toNotificationsList(this)
-        }
+        imgNotification?.setOnClickListener {}
 
     }
 

@@ -67,10 +67,10 @@ object NetworkModule {
                     .addHeader("LanguageCode", Locale.getDefault().language)
                     .addHeader("Platform", "Android")
                     .addHeader("TimeZone", TimeZone.getDefault().id)
-                if (storageManager.accessToken.isNotEmpty())
-                    newRequestBuilder.addHeader(
-                        "Authorization", "Bearer ${storageManager.accessToken}"
-                    )
+//                if (storageManager.accessToken.isNotEmpty())
+//                    newRequestBuilder.addHeader(
+//                        "Authorization", "Bearer ${storageManager.accessToken}"
+//                    )
                 val url = request.url.toString()
                 val decodedUrl = URLDecoder.decode(url, "UTF-8")
                 chain.proceed(newRequestBuilder.url(decodedUrl).build())
