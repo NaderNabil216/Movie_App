@@ -17,18 +17,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        
-
-        CerqelDev {
-            initWith debug
-        }
-        CerqelTest {
-            initWith debug
-        }
-        CerqelUat {
-            initWith debug
-        }
-
     }
     namespace 'droidninja.filepicker'
 }

@@ -1,19 +1,23 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
 }
 
 android {
     namespace 'com.example.movieapp'
-    compileSdk 33
+    compileSdk (Android.compileSdkVersion)
 
     defaultConfig {
-        applicationId "com.example.movieapp"
-        minSdk 30
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
+        applicationId = Android.applicationId
+        minSdk (Android.minSdkVersion)
+        targetSdk (Android.targetSdkVersion)
+        versionCode = Android.versionCode
+        versionName = Android.versionName
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,6 +31,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -34,11 +41,57 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api project(":core")
+    api project(":movies_listing")
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    //kotlin
+    implementation(Kotlin.kotlin_stdlib_jdk)
+    implementation(Kotlin.kotlin_stdlib)
+    implementation(Kotlin.core_ktx)
+    implementation(Kotlin.kotlin_reflect)
+
+    //Androidx
+    implementation(Androidx.appcompat)
+    implementation(Androidx.fragment)
+    implementation(Androidx.cardview)
+    implementation(Androidx.recyclerview)
+    implementation(Androidx.multidex)
+    implementation(Androidx.legacy)
+    kapt(Androidx.appcompat)
+    implementation(Androidx.ifecycle_reactivestreams)
+    implementation(Androidx.lifecycle_common)
+    implementation(Androidx.lifecycle_runtime)
+    implementation(Androidx.lifecycle_livedata)
+    implementation(Androidx.constraintlayout)
+    implementation(Androidx.navigation_fragment)
+    implementation(Androidx.navigation_ui)
+    implementation(Androidx.lifecycle_viewmodel)
+    implementation(WorkManager.workManager)
+
+    //Retrofit
+    implementation(Retrofit.retrofit2)
+    implementation(Retrofit.okhttp3)
+    implementation(Retrofit.converter_gson)
+    implementation(Retrofit.logging_interceptor)
+
+    //Gson
+    implementation(Gson.gson)
+
+    //Coroutines
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
+
+    //Hilt
+    implementation(Hilt.hilt_android)
+    kapt(Hilt.kapt_hilt_android)
+    kapt(Hilt.kapt_hilt_compiler)
+
+    //Shared Pref
+    implementation(SharedPreference.sharedPreference)
+    implementation(SharedPreference.hawk)
 }

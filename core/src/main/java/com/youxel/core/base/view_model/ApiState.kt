@@ -2,7 +2,7 @@ package com.youxel.core.base.view_model
 
 
 /**
- * Created by ahmed abdelsaimee on 16/12/2021.
+ * Created by Nader Nabil on 16/12/2021.
  */
 sealed class ApiState<out T>
 {

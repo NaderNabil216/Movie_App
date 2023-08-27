@@ -25,7 +25,6 @@ import com.youxel.core.domain.entities.base.ErrorModel
 import com.youxel.core.domain.entities.base.ErrorStatus
 import com.youxel.core.utils.LoadingListener
 import com.youxel.core.utils.showToast
-import com.youxel.navigation.LoginNavigation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.ensureActive
 import javax.inject.Inject

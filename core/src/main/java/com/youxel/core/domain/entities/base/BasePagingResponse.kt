@@ -6,22 +6,19 @@ import com.google.gson.annotations.SerializedName
 /**
  * Created by Nader Nabil on 29/10/2020.
  */
-abstract class BasePagingResponse <T> {
-
-    @SerializedName("success")
+open class BasePagingResponse<T>{
     @Expose
-    val success: Boolean = false
-
-    @SerializedName("errorCode")
+    @SerializedName("results")
+    var results: List<T>? = listOf()
     @Expose
-    val errorCode: Int = 0
+    @SerializedName("total_results")
+    var totalResults: Int?=0
 
-    @SerializedName("message")
     @Expose
-    val message: String = ""
+    @SerializedName("total_pages")
+    var totalPages: Int?=0
 
-    @SerializedName("result")
     @Expose
-    val result: ResponsePagingResultModel<T>? = null
-
+    @SerializedName("page")
+    var page: Int?=0
 }

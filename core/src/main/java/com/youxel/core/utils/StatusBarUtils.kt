@@ -4,7 +4,7 @@ import android.app.Activity
 import android.view.WindowManager
 
 /**
- * Created by Shehab Elsarky
+ * Created By Nader Nabil
  */
 
 fun Activity.setFullScreen(){

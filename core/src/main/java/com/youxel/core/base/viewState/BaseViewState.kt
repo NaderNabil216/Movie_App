@@ -1,7 +1,7 @@
 package com.youxel.core.base.viewState
 
 /**
- * Created by Yasmeen hassan on 21/12/15.
+ * Created by Nader Nabil on 21/12/15.
  */
 sealed class
 BaseViewState {

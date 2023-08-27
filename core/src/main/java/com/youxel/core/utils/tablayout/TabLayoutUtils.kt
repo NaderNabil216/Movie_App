@@ -5,7 +5,7 @@ import com.google.android.material.tabs.TabLayout
 import javax.inject.Inject
 
 /**
- *  Created by Shehab Elsarky
+ *  Created By Nader Nabil
  */
 class TabLayoutUtils @Inject constructor() {
 

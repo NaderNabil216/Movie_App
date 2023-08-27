@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 
 /*
-*  Created by Shehab Elsarky.
+*  Created By Nader Nabil.
 */
 fun <T : ViewModel> Fragment.setSharedViewModel(
     owner: ViewModelStoreOwner, viewModelClass: Class<T>, viewModelFactory: ViewModelProvider.Factory

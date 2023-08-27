@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 /**
- * Created By Shehab Elsarky
+ * Created By Nader Nabil
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -61,20 +61,6 @@ object NetworkModule {
             .connectTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
-            .addInterceptor { chain ->
-                val request = chain.request() //original request
-                val newRequestBuilder = request.newBuilder() //modified request
-                    .addHeader("LanguageCode", Locale.getDefault().language)
-                    .addHeader("Platform", "Android")
-                    .addHeader("TimeZone", TimeZone.getDefault().id)
-//                if (storageManager.accessToken.isNotEmpty())
-//                    newRequestBuilder.addHeader(
-//                        "Authorization", "Bearer ${storageManager.accessToken}"
-//                    )
-                val url = request.url.toString()
-                val decodedUrl = URLDecoder.decode(url, "UTF-8")
-                chain.proceed(newRequestBuilder.url(decodedUrl).build())
-            }
             .addInterceptor(loggingInterceptor)
         return okHttpClientBuilder.build()
     }

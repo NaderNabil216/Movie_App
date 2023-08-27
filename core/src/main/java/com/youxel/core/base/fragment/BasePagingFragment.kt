@@ -82,8 +82,8 @@ abstract class BasePagingFragment<T : Any, VBI : ViewBinding, VB : ViewBinding, 
                 when (it) {
                     is ApiState.Idle -> {}
                     is ApiState.Success -> {
-                        initShowingTitle(it.successData.totalCount.toString())
-                        showOrHideEmptyView(it.successData.totalCount == 0)
+                        initShowingTitle(it.successData.totalResults.toString())
+                        showOrHideEmptyView(it.successData.totalResults == 0)
                         pagingResponseObserver(it.successData)
                     }
                 }
@@ -131,7 +131,7 @@ abstract class BasePagingFragment<T : Any, VBI : ViewBinding, VB : ViewBinding, 
         } else if (viewModel.pageNumber > 1) {
             pagingAdapter.addToList(response.data)
         }
-        viewModel.loadMore = pagingAdapter.itemCount < response.totalCount
+        viewModel.loadMore = pagingAdapter.itemCount < response.totalResults
     }
 
     open fun onSortIconClick() {}

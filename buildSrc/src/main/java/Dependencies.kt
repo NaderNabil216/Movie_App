@@ -114,11 +114,11 @@ object Versions {
 }
 
 object Android {
-    val applicationId = "com.youxel.cerqel"
-    val versionName = "3.15.6"
+    val applicationId = "com.example.movieapp"
+    val versionName = "1.0"
     val compileSdkVersion = 33
     val buildToolsVersion = "33.0.1"
-    val minSdkVersion = 23
+    val minSdkVersion = 26
     val targetSdkVersion = 33
     val versionCode = 1
 }

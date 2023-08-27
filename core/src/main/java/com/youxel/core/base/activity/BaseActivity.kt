@@ -2,7 +2,6 @@ package com.youxel.core.base.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.os.storage.StorageManager
 import android.view.View
 import android.widget.*
 import androidx.annotation.IdRes
@@ -15,13 +14,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.youxel.core.R
 import com.youxel.core.base.fragment.BaseUiHelper
+import com.youxel.core.data.local.StorageManager
 import com.youxel.core.utils.*
 import com.youxel.navigation.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
 
 /**
- *  Created by Shehab Elsarky
+ *  Created By Nader Nabil
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListener {

@@ -1,5 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
 rootProject.name = "Movie App"
 include ':app'
 include ':navigation'
 include ':core'
 include ':filepicker'
+include ':movies_listing'

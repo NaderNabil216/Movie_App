@@ -1,7 +1,7 @@
 package com.youxel.core.utils.network
 
 /**
- * Created by Shehab Elsarky.
+ * Created By Nader Nabil.
  */
 class NetworkUtils {
 

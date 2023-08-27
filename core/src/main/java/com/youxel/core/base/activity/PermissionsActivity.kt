@@ -13,7 +13,7 @@ import com.youxel.core.utils.showRationaleDialog
 
 
 /**
- * Created by Shehab Elsarky
+ * Created By Nader Nabil
  */
 abstract class PermissionsActivity : BaseActivity() {
     abstract var permissions: Array<String>

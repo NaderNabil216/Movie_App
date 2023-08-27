@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Cerqel</string>
     <string name="loading">Please wait…</string>
     <string name="health">Health</string>
     <string name="signin">Sign in</string>

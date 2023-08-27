@@ -22,11 +22,8 @@ import com.youxel.core.domain.entities.enums.ToastType
 import com.youxel.core.utils.LoadingListener
 
 import com.youxel.core.utils.hideKeyBoardOutSideTap
-import com.youxel.core.utils.loadImg
 import com.youxel.core.utils.showToast
 import com.youxel.core.utils.updateStatusBarColor
-import com.youxel.navigation.LoginNavigation
-import com.youxel.navigation.SearchNavigation
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.ensureActive
 import javax.inject.Inject
@@ -73,9 +70,7 @@ abstract class BaseFragment<VB : ViewBinding, VM : BaseViewModel, HelperClass : 
         super.onViewCreated(view, savedInstanceState)
         handleState()
         viewModel.setNotInternetMsg(getString(R.string.no_internet_connection))
-        view.findViewById<ImageView>(R.id.img_profile)?.run {
-            setOnClickListener { toolbarListener?.openBaseSideMenu() }
-        }
+
     }
 
     override fun onResume() {

@@ -4,7 +4,7 @@ import com.youxel.core.domain.entities.FileUploadQuery
 import java.io.File
 
 /**
- *  Created by Shehab Elsarky.
+ *  Created By Nader Nabil.
  */
 
 fun getFileUploadQuery(filePath: String): FileUploadQuery {

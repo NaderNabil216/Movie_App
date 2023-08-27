@@ -7,7 +7,7 @@ import com.youxel.core.utils.network.NetworkUtils
 import javax.inject.Inject
 
 /**
- * Created by Shehab Elsarky
+ * Created By Nader Nabil
  */
 open class NetworkBaseFragment : Fragment(), ConnectivityProvider.ConnectivityStateListener {
 

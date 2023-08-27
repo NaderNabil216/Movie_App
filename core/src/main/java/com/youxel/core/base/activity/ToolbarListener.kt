@@ -35,8 +35,6 @@ interface ToolbarListener {
 
     fun toggleSearchIconToolbar(isShow: Boolean? = true)
 
-    fun openBaseSideMenu()
-
     fun loadUserProfileImage(userProfileImageUrl: String)
 }
 

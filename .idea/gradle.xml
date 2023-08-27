@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/filepicker" />
+            <option value="$PROJECT_DIR$/movies_listing" />
             <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>

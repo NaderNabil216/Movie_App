@@ -3,7 +3,7 @@ package com.youxel.core.domain.entities
 import java.io.File
 
 /**
- * Created by Shehab Elsarky.
+ * Created By Nader Nabil.
  */
 data class FileUploadQuery(
     var file: ArrayList<File> = arrayListOf(),

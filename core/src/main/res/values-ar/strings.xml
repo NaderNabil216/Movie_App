@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">سيركل</string>
-
     <string name="loading">برجاء الإنتظار …</string>
     <string name="health">Health</string>
     <string name="signin">تسجيل الدخول</string>

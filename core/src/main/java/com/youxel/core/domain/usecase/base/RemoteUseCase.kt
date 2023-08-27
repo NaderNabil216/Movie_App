@@ -20,24 +20,24 @@ typealias CompletionBlock<T> = RemoteUseCase.Request<T>.() -> Unit
 
 
 /**
- * Created by Shehab Elsarky
+ * Created By Nader Nabil
  */
 /**
- * @type in P paramater
- * @type R DTO result
- * @type FR(final result) mapped DTO to BO
+ * @type in Query paramater
+ * @type RemoteResponse DTO result
+ * @type LocalResponse(final result) mapped DTO to BO
  */
-abstract class RemoteUseCase<P, R, FR>(protected val errorUtil: CloudErrorMapper) {
+abstract class RemoteUseCase<Query, RemoteResponse, LocalResponse>(protected val errorUtil: CloudErrorMapper) {
 
     private var parentJob: Job = Job()
     private var backgroundContext: CoroutineContext = Dispatchers.IO
     private var foregroundContext: CoroutineContext = Dispatchers.Main
 
-    protected abstract suspend fun executeOnBackground(parameters: P): R
-    protected abstract suspend fun convert(dto: R): FR
+    protected abstract suspend fun executeOnBackground(parameters: Query): RemoteResponse
+    protected abstract suspend fun convert(dto: RemoteResponse): LocalResponse
 
-    fun execute(parameters: P, block: CompletionBlock<FR>) {
-        val response = Request<FR>().apply { block() }
+    fun execute(parameters: Query, block: CompletionBlock<LocalResponse>) {
+        val response = Request<LocalResponse>().apply { block() }
         CoroutineScope(foregroundContext + parentJob).launch {
             response(true)
             try {
@@ -77,8 +77,8 @@ abstract class RemoteUseCase<P, R, FR>(protected val errorUtil: CloudErrorMapper
         }
     }
 
-    fun executeWithApiState(parameters: P, block: CompletionBlock<ApiState<FR>>) {
-        val response = Request<ApiState<FR>>().apply { block() }
+    fun executeWithApiState(parameters: Query, block: CompletionBlock<ApiState<LocalResponse>>) {
+        val response = Request<ApiState<LocalResponse>>().apply { block() }
         CoroutineScope(foregroundContext + parentJob).launch {
             response(true)
             try {
@@ -118,15 +118,15 @@ abstract class RemoteUseCase<P, R, FR>(protected val errorUtil: CloudErrorMapper
         }
     }
 
-    private fun <R> getMessageFromRemoteResponse(dto: R): String {
-        if (Gson().toJson(dto).trim().startsWith("{")) {
+    private fun <RemoteResponse> getMessageFromRemoteResponse(dto: RemoteResponse): String {
+        return if (Gson().toJson(dto).trim().startsWith("{")) {
             val response = JSONObject(Gson().toJson(dto))
             val status = response.optBoolean("success")
-            return if (!status) {
-                response.optString("message") ?: ""
+            if (!status) {
+                response.optString("message").orEmpty()
             } else
                 ""
-        } else return ""
+        } else ""
     }
 
     private fun unsubscribe() {
