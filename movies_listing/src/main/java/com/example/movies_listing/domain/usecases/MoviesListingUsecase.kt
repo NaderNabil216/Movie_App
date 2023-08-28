@@ -1,6 +1,7 @@
 package com.example.movies_listing.domain.usecases
 
-import com.example.movies_listing.data.repository.MoviesListingRepository
+import com.example.movies_listing.BuildConfig
+import com.example.movies_listing.data.repository.MoviesRepository
 import com.example.movies_listing.domain.entities.local.Movie
 import com.example.movies_listing.domain.entities.query.MovieListingQuery
 import com.example.movies_listing.domain.entities.response.MoviesListingRemoteResponse
@@ -12,14 +13,14 @@ import javax.inject.Inject
 
 class MoviesListingUsecase @Inject constructor(
     errorUtil: CloudErrorMapper,
-    private val moviesListingRepository: MoviesListingRepository,
+    private val moviesRepository: MoviesRepository,
     private val mapper: MovieMapper
 ) : RemoteUseCase<MovieListingQuery, MoviesListingRemoteResponse, ResponsePagingResultModel<Movie>>(
     errorUtil
 ) {
     override suspend fun executeOnBackground(parameters: MovieListingQuery): MoviesListingRemoteResponse {
-        parameters.api_key = "c9856d0cb57c3f14bf75bdc6c063b8f3"
-        return moviesListingRepository.getMoviesList(parameters)
+        parameters.apiKey = BuildConfig.API_KEY
+        return moviesRepository.getMoviesList(parameters)
     }
 
     override suspend fun convert(dto: MoviesListingRemoteResponse): ResponsePagingResultModel<Movie> {

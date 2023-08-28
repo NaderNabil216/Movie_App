@@ -1,6 +1,7 @@
 package com.example.movies_listing.ui.fragment.listing
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.movies_listing.databinding.FragmentMoviesListingBinding
 import com.example.movies_listing.databinding.ItemMovieBinding
 import com.example.movies_listing.domain.entities.local.Movie
@@ -17,10 +18,14 @@ class MoviesListingFragment :
         FragmentMoviesListingBinding::inflate
     ) {
     override val pagingAdapter: BaseRecyclerAdapter<ItemMovieBinding, Movie> =
-        MoviesListingAdapter()
+        MoviesListingAdapter(::onMovieItemClickListener)
     override val emptyViewTxtRes: Int = com.youxel.core.R.string.empty_list
     override val viewModel: MoviesListingViewModel by viewModels()
 
     @Inject
     override lateinit var fragmentHelper: MoviesListingUiHelper
+
+    private fun onMovieItemClickListener(movieId:Long){
+        findNavController().navigate(MoviesListingFragmentDirections.actionMoviesListingFragmentToMovieDetailsFragment(movieId))
+    }
 }

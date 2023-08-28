@@ -2,6 +2,7 @@ package com.youxel.core.base.fragment
 
 import androidx.fragment.app.Fragment
 import com.youxel.core.base.dialog.BaseNetworkingDialog
+import com.youxel.core.domain.entities.base.ErrorStatus
 import com.youxel.core.utils.network.ConnectivityProvider
 import com.youxel.core.utils.network.NetworkUtils
 import javax.inject.Inject
@@ -43,12 +44,16 @@ open class NetworkBaseFragment : Fragment(), ConnectivityProvider.ConnectivitySt
         isNetworkConnected = if (!hasInternet) {
             baseNetworkingDialog.showDialog(
                 requireActivity(),
-                com.youxel.core.domain.entities.base.ErrorStatus.NO_CONNECTION
+                ErrorStatus.NO_CONNECTION
             )
+            onInternetStatusChanged(false)
             false
         } else {
             if (baseNetworkingDialog.isShown) baseNetworkingDialog.dismiss()
+            onInternetStatusChanged(true)
             true
         }
     }
+
+    open fun onInternetStatusChanged(isConnected:Boolean){}
 }

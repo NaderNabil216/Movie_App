@@ -2,6 +2,7 @@ package com.youxel.core.utils
 
 import android.Manifest
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -115,5 +116,18 @@ fun Context.openApplication(webLink: String, androidUrl: String) {
         }
     } else {
         startBrowserIntent(webLink)
+    }
+}
+
+fun Context.watchYoutube(id: String) {
+    val appIntent = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:$id"))
+    val webIntent = Intent(
+        Intent.ACTION_VIEW,
+        Uri.parse("https://youtu.be/$id")
+    )
+    try {
+        this.startActivity(appIntent)
+    } catch (ex: ActivityNotFoundException) {
+        this.startActivity(webIntent)
     }
 }

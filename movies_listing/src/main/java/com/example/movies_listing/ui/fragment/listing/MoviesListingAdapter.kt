@@ -7,7 +7,9 @@ import com.example.movies_listing.domain.entities.local.Movie
 import com.youxel.core.base.adapter.diffutilsAdapter.BaseRecyclerAdapter
 import com.youxel.core.utils.loadImg
 
-class MoviesListingAdapter() : BaseRecyclerAdapter<ItemMovieBinding, Movie>(ItemMovieBinding::inflate,
+class MoviesListingAdapter(
+    private val onItemClickListener: (Long)->Unit
+) : BaseRecyclerAdapter<ItemMovieBinding, Movie>(ItemMovieBinding::inflate,
 { oldItem, newItem -> oldItem.id == newItem.id }) {
 
     @SuppressLint("ResourceAsColor")
@@ -24,9 +26,11 @@ class MoviesListingAdapter() : BaseRecyclerAdapter<ItemMovieBinding, Movie>(Item
             tvOverview.text=item.overview
             rbMovie.apply {
                 numStars=5
-                rating=item.rating.div(2.0f)
+                rating=item.rating
                 stepSize=0.1f
             }
+
+            root.setOnClickListener { onItemClickListener(item.id) }
         }
     }
 }

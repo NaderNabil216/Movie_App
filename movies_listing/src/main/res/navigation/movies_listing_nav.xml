@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/movies_listing_nav"
     app:startDestination="@id/moviesListingFragment">
 
     <fragment
+        tools:layout="@layout/fragment_movies_listing"
         android:id="@+id/moviesListingFragment"
-        android:name="com.example.movies_listing.ui.fragment.listing.MoviesListingFragment"
-        android:label="MoviesListingFragment" />
+        android:name="com.example.movies_listing.ui.fragment.listing.MoviesListingFragment">
+        <action
+            android:id="@+id/action_moviesListingFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_movie_details"
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.movies_listing.ui.fragment.details.MovieDetailsFragment">
+        <argument
+            android:name="movieId"
+            app:argType="long" />
+    </fragment>
 </navigation>

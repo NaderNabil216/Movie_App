@@ -1,7 +1,7 @@
 package com.example.movies_listing.domain.entities.local
 
 data class Movie(
-    val id:Int=0,
+    val id:Long=0,
     val title:String="",
     val posterImage:String="",
     val releaseDate:String="",

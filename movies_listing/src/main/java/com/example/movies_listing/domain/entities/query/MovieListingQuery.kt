@@ -4,5 +4,5 @@ data class MovieListingQuery(
     var pageNumber: Int,
     val sortBy: String = "popularity.desc",
     val language: String = "en-US",
-    var api_key: String=""
+    var apiKey: String=""
 )

@@ -1,9 +1,9 @@
 package com.example.movies_listing.di
 
-import com.example.movies_listing.data.repository.MoviesListingRepository
-import com.example.movies_listing.data.repository.MoviesListingRepositoryImpl
-import com.example.movies_listing.data.source.remote.MoviesListingRemoteSource
-import com.example.movies_listing.data.source.remote.MoviesListingRemoteSourceImpl
+import com.example.movies_listing.data.repository.MoviesRepository
+import com.example.movies_listing.data.repository.MoviesRepositoryImpl
+import com.example.movies_listing.data.source.remote.MoviesRemoteSource
+import com.example.movies_listing.data.source.remote.MoviesRemoteSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,12 +17,12 @@ abstract class MoviesListingModule {
 
     @Binds
     abstract fun bindMoviesListingRepository(
-        moviesListingRepositoryImpl: MoviesListingRepositoryImpl
-    ): MoviesListingRepository
+        moviesListingRepositoryImpl: MoviesRepositoryImpl
+    ): MoviesRepository
 
     @Binds
     abstract fun bindMoviesListingRemoteSource(
-        moviesListingRemoteSourceImpl: MoviesListingRemoteSourceImpl
-    ): MoviesListingRemoteSource
+        moviesListingRemoteSourceImpl: MoviesRemoteSourceImpl
+    ): MoviesRemoteSource
 
 }

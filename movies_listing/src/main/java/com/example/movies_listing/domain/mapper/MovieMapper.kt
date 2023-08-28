@@ -16,7 +16,7 @@ class MovieMapper @Inject constructor():ModelMapper<RemoteMovie,Movie> {
                     changeDateFormat(date, "yyyy-MM-dd", "yyyy")
                 }.orEmpty(),
                 posterImage = posterBaseUrl+it.posterPath,
-                rating = it.voteAverage?:0.0f,
+                rating = (it.voteAverage?.div(2.0f))?:0.0f,
                 overview = it.overview.orEmpty()
             )
         }?:Movie()

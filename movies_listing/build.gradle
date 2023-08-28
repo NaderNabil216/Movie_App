@@ -8,12 +8,18 @@ plugins {
     id 'kotlin-parcelize'
 }
 
+def getApiKey() {
+    return new File("C:/Users/nader/AndroidStudioProjects/MovieApp/api_key.txt").text.trim()
+}
+
 android {
     namespace 'com.example.movies_listing'
     compileSdk (Android.compileSdkVersion)
 
     defaultConfig {
         minSdk (Android.minSdkVersion)
+
+        buildConfigField "String", "API_KEY", "\"" + getApiKey() + "\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

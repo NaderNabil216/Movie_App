@@ -1,6 +1,6 @@
 package com.example.movies_listing.di
 
-import com.example.movies_listing.data.restful.MoviesListingApi
+import com.example.movies_listing.data.restful.MoviesApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,7 +13,7 @@ import retrofit2.Retrofit
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
     @Provides
-    internal fun provideServicesApi(retrofit: Retrofit): MoviesListingApi {
-        return retrofit.create(MoviesListingApi::class.java)
+    internal fun provideServicesApi(retrofit: Retrofit): MoviesApi {
+        return retrofit.create(MoviesApi::class.java)
     }
 }
