@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="trailer" tools:ignore="MissingTranslation">Trailer</string>
+    <string name="oops_no_internet_connection" tools:ignore="MissingTranslation">Oops , No Internet Connection</string>
 </resources>

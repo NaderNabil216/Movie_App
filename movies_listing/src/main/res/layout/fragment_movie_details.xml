@@ -6,10 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/bg_gray">
 
+    <include
+        android:id="@+id/noInternetView"
+        layout="@layout/view_no_internet"
+        android:visibility="gone" />
+
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

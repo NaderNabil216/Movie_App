@@ -28,4 +28,11 @@ class MoviesListingFragment :
     private fun onMovieItemClickListener(movieId:Long){
         findNavController().navigate(MoviesListingFragmentDirections.actionMoviesListingFragmentToMovieDetailsFragment(movieId))
     }
+
+    override fun onInternetStatusChanged(isConnected: Boolean) {
+        if (isConnected){
+            viewModel.send(MoviesListingIntent.GetMoviesList)
+        }
+       fragmentHelper.handleNoInternetConnectionView(binding,isConnected)
+    }
 }

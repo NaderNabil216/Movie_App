@@ -96,4 +96,6 @@ dependencies {
     //Shared Pref
     implementation(SharedPreference.sharedPreference)
     implementation(SharedPreference.hawk)
+
+    implementation(Design.lottie)
 }

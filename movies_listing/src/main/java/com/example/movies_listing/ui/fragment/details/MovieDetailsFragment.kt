@@ -29,12 +29,12 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding,MovieDetai
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         hideActivityToolbar()
-        getMovieDetails(args.movieId)
+        getMovieDetails()
         collectMovieDetailsData()
     }
 
-    private fun getMovieDetails(movieId: Long){
-        viewModel.send(MovieDetailsIntent.GetMovieDetails(movieId))
+    private fun getMovieDetails(){
+        viewModel.send(MovieDetailsIntent.GetMovieDetails(args.movieId))
     }
 
     private fun collectMovieDetailsData() {
@@ -51,5 +51,12 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding,MovieDetai
 
     private fun onTrailerItemClicked(trailerKey:String){
         requireContext().watchYoutube(trailerKey)
+    }
+
+    override fun onInternetStatusChanged(isConnected: Boolean) {
+        if (isConnected){
+            getMovieDetails()
+        }
+        fragmentHelper.handleNoInternetConnectionView(binding,isConnected)
     }
 }
