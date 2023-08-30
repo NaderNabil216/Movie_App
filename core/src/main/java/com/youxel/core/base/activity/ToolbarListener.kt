@@ -33,6 +33,8 @@ interface ToolbarListener {
      */
     fun showActivityToolbar(isShowBack: Boolean? = false)
 
+    fun showOnlyHeaderToolbar()
+
     fun toggleSearchIconToolbar(isShow: Boolean? = true)
 
     fun loadUserProfileImage(userProfileImageUrl: String)

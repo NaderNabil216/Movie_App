@@ -4,6 +4,7 @@
     <application>
         <activity
             android:name="com.example.movies_listing.ui.activity.MoviesListingActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

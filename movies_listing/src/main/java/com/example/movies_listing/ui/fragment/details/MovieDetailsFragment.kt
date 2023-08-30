@@ -1,11 +1,11 @@
 package com.example.movies_listing.ui.fragment.details
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
 import com.example.movies_listing.databinding.FragmentMovieDetailsBinding
 import com.youxel.core.base.fragment.BaseFragment
@@ -29,7 +29,11 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding,MovieDetai
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        hideActivityToolbar()
+        toolbarListener?.run {
+            showActivityToolbar(true)
+            setActivityToolbarTitle(getString(com.youxel.core.R.string.details),Gravity.CENTER)
+
+        }
         getMovieDetails()
         collectMovieDetailsData()
     }

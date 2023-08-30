@@ -49,11 +49,10 @@ class BaseNetworkingDialog @Inject constructor() {
                 context,
                 context.getString(R.string.unknown_host)
             )
-            ErrorStatus.EMPTY_RESPONSE -> setTextErrorMsg(context, errorMessage ?: "")
-            else -> setTextErrorMsg(
-                context,
-                context.getString(R.string.no_internet_connection)
-            )
+            else->{
+                setTextErrorMsg(context, errorMessage ?: "")
+            }
+
         }
         snackbar.show()
     }

@@ -127,7 +127,6 @@ abstract class BasePagingFragment<T : Any, VBI : ViewBinding, VB : ViewBinding, 
     open fun pagingResponseObserver(response: ResponsePagingResultModel<T>) {
         if (viewModel.pageNumber == 1) {
             pagingAdapter.submitList(response.data)
-            getPagingRecycler().smoothScrollToPosition(0)
         } else if (viewModel.pageNumber > 1) {
             pagingAdapter.addToList(response.data)
         }

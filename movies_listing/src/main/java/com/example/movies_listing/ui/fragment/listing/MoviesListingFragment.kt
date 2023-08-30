@@ -1,7 +1,11 @@
 package com.example.movies_listing.ui.fragment.listing
 
+import android.os.Bundle
+import android.view.Gravity
+import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.movies_listing.R
 import com.example.movies_listing.databinding.FragmentMoviesListingBinding
 import com.example.movies_listing.databinding.ItemMovieBinding
 import com.example.movies_listing.domain.entities.local.Movie
@@ -25,14 +29,30 @@ class MoviesListingFragment :
     @Inject
     override lateinit var fragmentHelper: MoviesListingUiHelper
 
-    private fun onMovieItemClickListener(movieId:Long){
-        findNavController().navigate(MoviesListingFragmentDirections.actionMoviesListingFragmentToMovieDetailsFragment(movieId))
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        toolbarListener?.run {
+            showOnlyHeaderToolbar()
+            setActivityToolbarTitle(
+                getString(R.string.discover_movies),
+                Gravity.CENTER
+            )
+
+        }
+    }
+
+    private fun onMovieItemClickListener(movieId: Long) {
+        findNavController().navigate(
+            MoviesListingFragmentDirections.actionMoviesListingFragmentToMovieDetailsFragment(
+                movieId
+            )
+        )
     }
 
     override fun onInternetStatusChanged(isConnected: Boolean) {
-        if (isConnected){
+        if (isConnected) {
             viewModel.send(MoviesListingIntent.GetMoviesList)
         }
-       fragmentHelper.handleNoInternetConnectionView(binding,isConnected)
+        fragmentHelper.handleNoInternetConnectionView(binding, isConnected)
     }
 }

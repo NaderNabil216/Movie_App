@@ -147,17 +147,6 @@ open class BaseViewModel @Inject constructor() : ViewModel() {
                     _state.value = UiState.CancellationMessage(it.message ?: "")
                 }
             }
-
-
-        } else {
-            _state.value = UiState.Error(
-                ErrorModel(
-                    noInternetLiveDate.value,
-                    0,
-                    ErrorStatus.NO_CONNECTION
-                )
-            )
-
         }
 
     }

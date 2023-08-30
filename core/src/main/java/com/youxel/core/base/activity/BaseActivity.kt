@@ -11,9 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.viewbinding.ViewBinding
 import com.youxel.core.R
-import com.youxel.core.base.fragment.BaseUiHelper
 import com.youxel.core.data.local.StorageManager
 import com.youxel.core.utils.*
 import com.youxel.navigation.*
@@ -23,10 +21,7 @@ import javax.inject.Inject
 /**
  *  Created By Nader Nabil
  */
-@OptIn(ExperimentalCoroutinesApi::class)
 abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListener {
-    private val TAG = BaseActivity::class.java.simpleName
-
     private lateinit var navFragment: NavHostFragment
     lateinit var navController: NavController
 
@@ -45,7 +40,6 @@ abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListe
     var tvTitle: TextView? = null
     var tvBack: TextView? = null
     var ivImageBack: ImageView? = null
-    var sideMenuContainer: FrameLayout? = null
     private var imgProfile: ImageView? = null
     private var llNavigationGroup: LinearLayout? = null
     private var imgSearch: ImageView? = null
@@ -96,12 +90,11 @@ abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListe
 
         imgSearch?.setOnClickListener {}
 
-        llNavigationGroup?.setOnClickListener { onBackPressed() }
+        llNavigationGroup?.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
 
         imgNotification?.setOnClickListener {}
 
     }
-
 
 
     override fun showActivityToolbar(isShowBack: Boolean?) {
@@ -120,6 +113,16 @@ abstract class BaseActivity : AppCompatActivity(), LoadingListener, ToolbarListe
                 imgSearch
             )
         }
+        toolbar?.visibility = View.VISIBLE
+    }
+
+    override fun showOnlyHeaderToolbar() {
+        hideViews(
+            llNavigationGroup,
+            imgProfile,
+            imgNotification,
+            imgSearch
+        )
         toolbar?.visibility = View.VISIBLE
     }
 

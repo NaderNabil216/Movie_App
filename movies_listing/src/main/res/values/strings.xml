@@ -4,4 +4,5 @@
     <string name="oops_no_internet_connection" tools:ignore="MissingTranslation">Oops , No Internet Connection</string>
     <string name="rating" tools:ignore="MissingTranslation">rating: %1$s</string>
     <string name="votes" tools:ignore="MissingTranslation">votes: %1$s</string>
+    <string name="discover_movies" tools:ignore="MissingTranslation">Discover Movies</string>
 </resources>
