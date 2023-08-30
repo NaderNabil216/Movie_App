@@ -1,14 +1,17 @@
 package com.example.movies_listing.ui.fragment.details
 
-import androidx.core.view.isVisible
+import android.content.Context
 import com.example.movies_listing.R
 import com.example.movies_listing.databinding.FragmentMovieDetailsBinding
 import com.example.movies_listing.domain.entities.local.MovieDetails
+import com.youxel.core.base.dialog.BaseNetworkingDialog
 import com.youxel.core.base.fragment.BaseUiHelper
+import com.youxel.core.domain.entities.base.ErrorStatus
 import com.youxel.core.utils.loadImg
 import javax.inject.Inject
 
-class MovieDetailsUiHelper @Inject constructor() : BaseUiHelper() {
+class MovieDetailsUiHelper @Inject constructor(private val baseNetworkingDialog: BaseNetworkingDialog) :
+    BaseUiHelper() {
     fun setData(
         binding: FragmentMovieDetailsBinding,
         trailerAdapter: MovieDetailsTrailerAdapter,
@@ -31,13 +34,4 @@ class MovieDetailsUiHelper @Inject constructor() : BaseUiHelper() {
         }
     }
 
-    internal fun handleNoInternetConnectionView(
-        binding: FragmentMovieDetailsBinding,
-        isConnected: Boolean
-    ) {
-        binding.run {
-            scrollContent.isVisible = isConnected
-            noInternetView.root.isVisible = isConnected.not()
-        }
-    }
 }

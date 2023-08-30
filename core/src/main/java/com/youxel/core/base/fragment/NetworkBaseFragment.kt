@@ -42,14 +42,9 @@ open class NetworkBaseFragment : Fragment(), ConnectivityProvider.ConnectivitySt
     override fun onNetworkStateChange(state: ConnectivityProvider.NetworkState) {
         val hasInternet = NetworkUtils.isNetworkConnected(state)
         isNetworkConnected = if (!hasInternet) {
-            baseNetworkingDialog.showDialog(
-                requireActivity(),
-                ErrorStatus.NO_CONNECTION
-            )
             onInternetStatusChanged(false)
             false
         } else {
-            if (baseNetworkingDialog.isShown) baseNetworkingDialog.dismiss()
             onInternetStatusChanged(true)
             true
         }

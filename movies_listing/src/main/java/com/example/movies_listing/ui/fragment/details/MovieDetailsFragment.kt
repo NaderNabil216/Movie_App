@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.movies_listing.databinding.FragmentMovieDetailsBinding
 import com.youxel.core.base.fragment.BaseFragment
 import com.youxel.core.base.view_model.ApiState
+import com.youxel.core.domain.entities.base.ErrorStatus
 import com.youxel.core.utils.watchYoutube
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -56,7 +57,11 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding,MovieDetai
     override fun onInternetStatusChanged(isConnected: Boolean) {
         if (isConnected){
             getMovieDetails()
+        }else{
+            baseNetworkingDialog.showDialog(
+                requireActivity(),
+                ErrorStatus.NO_CONNECTION
+            )
         }
-        fragmentHelper.handleNoInternetConnectionView(binding,isConnected)
     }
 }
