@@ -6,7 +6,10 @@ import com.youxel.core.domain.entities.enums.DateDifference
 import com.youxel.core.domain.entities.enums.DateType
 import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.time.Year
+import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeParseException
 import java.util.*
 
 
@@ -45,19 +48,18 @@ fun convertDateStringToDate(
 fun changeDateFormat(
     dateFromApi: String,
     inputDateTemplate: String,
-    outputDateTemplate: String,
-    timeZone: String? = null
+    outputDateTemplate: String
 ): String {
     return try {
-        val inputSimpleDateFormat = SimpleDateFormat(inputDateTemplate, Locale.US)
-        timeZone?.let {
-            inputSimpleDateFormat.timeZone = TimeZone.getTimeZone(it)
-        }
-        val outputSimpleDateFormat = SimpleDateFormat(outputDateTemplate, Locale.US)
-        outputSimpleDateFormat.timeZone = TimeZone.getDefault()
-        val apiDate = inputSimpleDateFormat.parse(dateFromApi) ?: Date()
-        outputSimpleDateFormat.format(apiDate)
-    } catch (e: Exception) {
+        val inputFormatter = DateTimeFormatter.ofPattern(inputDateTemplate, Locale.US)
+
+        val outputFormatter = DateTimeFormatter.ofPattern(outputDateTemplate, Locale.US)
+
+        val localDate = LocalDate.parse(dateFromApi, inputFormatter)
+        localDate.format(outputFormatter)
+
+    } catch (e: DateTimeParseException) {
+
         ""
     }
 }

@@ -17,10 +17,10 @@ class MovieDetailsMapper @Inject constructor(
                 releaseDate = it.releaseDate?.let { date ->
                     changeDateFormat(date, "yyyy-MM-dd", "yyyy")
                 }.orEmpty(),
-                posterImage = posterBaseUrl + it.posterPath,
+                posterImage = posterBaseUrl +(it.posterPath.orEmpty()),
                 rating = getRating(it.voteAverage),
                 overview = it.overview.orEmpty(),
-                backdropImage = backdropBaseUrl + it.backdropPath,
+                backdropImage = backdropBaseUrl + (it.backdropPath.orEmpty()),
                 voteCount = getRatingCount(it.voteCount),
                 isAdult = (it.adult ?: false).toString(),
                 trailers = it.videos?.results?.filter { item ->
@@ -34,16 +34,23 @@ class MovieDetailsMapper @Inject constructor(
         } ?: MovieDetails()
     }
 
-    private fun getRatingCount(ratingCount: Int?): String {
+    internal fun getRatingCount(ratingCount: Int?): String {
         return ratingCount?.let {
             when {
-                ratingCount > 1000 -> (ratingCount / 1000.0f).toString().plus("k")
+                ratingCount >= 1000 -> {
+                    val value = ratingCount / 1000.0f
+                    if (value == value.toInt().toFloat()) {
+                        "${value.toInt()}k"
+                    } else {
+                        "${String.format("%.1f", value)}K"
+                    }
+                }
                 else -> ratingCount.toString()
             }
-        }?:0.toString()
+        } ?: "0"
     }
 
-    private fun getRating(rating:Float?):String{
+    internal fun getRating(rating:Float?):String{
         return rating?.let {
             val roundedFloatValue = String.format("%.1f", it)
             roundedFloatValue.plus("/10")

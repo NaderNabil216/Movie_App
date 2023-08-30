@@ -16,7 +16,7 @@ class TrailerMapper @Inject constructor() : ModelMapper<RemoteVideoData?, Traile
         } ?: Trailer()
     }
 
-    private fun getTrailerThumbnail(trailerKey:String?):String{
+    internal fun getTrailerThumbnail(trailerKey:String?):String{
         return trailerKey?.let {
             YoutubeThumbnailBaseurl.replace(VideoKey,trailerKey)
         }.orEmpty()
